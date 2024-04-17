@@ -1,1 +1,1 @@
-> Exercícios propostos pela PUC - Minas
+<div align="center">Exercícios propostos pela PUC - Minas</div>
