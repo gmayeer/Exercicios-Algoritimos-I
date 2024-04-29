@@ -30,7 +30,7 @@ int sequencia(int n){
     else
         printf("%i, ", n);
     if(n > 0)
-        n = sequencia(n-1);
+        n = sequencia(n - 1);
 
 return n;
 }
