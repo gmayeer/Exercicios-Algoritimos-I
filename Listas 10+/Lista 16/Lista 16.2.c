@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+
+
+--->NÃO CONSEGUI FAZER AINDA<---
+
+
+*/
 void apresentacao();
 int ler_m();
 int ler_n();
