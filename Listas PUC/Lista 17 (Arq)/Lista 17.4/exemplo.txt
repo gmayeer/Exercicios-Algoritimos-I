@@ -1,6 +1,0 @@
-O autor tem 18 anos.
-O pai e a mãe do autor têm 53 e 47 anos, respectivamente.
-
-Você tem 18 anos.
-Seu pai tem 53 anos.
- Sua mãe tem 47 anos.
