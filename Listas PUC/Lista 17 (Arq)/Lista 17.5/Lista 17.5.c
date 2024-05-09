@@ -5,7 +5,7 @@
 
 int main(){
     int alunos = 0;
-    int idade;
+    int idade = 1;
     int somaidade = 0;
     float media;
     int acima = 0;
@@ -14,25 +14,26 @@ int main(){
 
         printf("ESTUDO DAS IDADES DOS ALUNOS\n\n\n");
 
-        while(alunos == FLAG){
+        while(idade != FLAG){
             alunos++;
-            printf("\nDigite aqui a idade do %dº aluno [pressione 0 para encerrar]", alunos);
+            printf("\nDigite aqui a idade do %dº aluno [pressione 0 para encerrar]: ", alunos);
             scanf("%d", &idade);
-            fprintf(f, "\nIdade do %dº aluno: %d", idade);
+            if(idade != 0)
+                fprintf(f, "%d\n", idade);
             somaidade += idade;
         }
     media = (float)somaidade / (alunos - 1);
     fclose(f);
 
     fopen("idade.txt", "r");
-        while(fscanf(f, "Idade do %*dº aluno: %d", &idade) == 1){
+        while(fscanf(f, "%d", &idade) != EOF){
             if(idade > media)
                 acima++;
         }
     fclose(f);
 
     fopen("idade.txt", "a");
-        fprintf(f, "Existem %d alunos acima da média.", acima);
+        fprintf(f, "\nExistem %d alunos acima da média.", acima);
     fclose(f);
 return 0;
 }
