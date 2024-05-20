@@ -8,7 +8,7 @@ int tamanhoStr(char str[]);
 int main(){
     printf("CALCULAR O TAMANHO DE UMA STRING\n\n");
     char str[100];
-    printf("Digite aqui um nome aleatório: ");
+    printf("Digite aqui uma palavra aleatória: ");
     scanf("%s", str);
 
     int resultado = tamanhoStr(str);
