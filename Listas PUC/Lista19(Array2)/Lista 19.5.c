@@ -1,9 +1,9 @@
 #include <stdio.h>
-//INCOMPLETO
+
 void trocaVet(float V[], int size);
 
 int main(){
-    printf("TROCA DE POSIÇÃO DE ELEMENTOS DE ARRAYS(MENOR PARA PRIMEIRO)\n\n");
+    printf("DEIXAR A ARRAY EM ORDEM\n\n");
     float V[100];
 
     int size = 0;
@@ -13,6 +13,7 @@ int main(){
         if(V[size] != -1)
             size++;
     }while(V[size] != -1);
+    size--;
     trocaVet(V, size);
 
     printf("\n\nApós as trocas, a array ficou assim: [");
@@ -28,17 +29,16 @@ return 0;
 }
 
 void trocaVet(float V[], int size){
-    float aux, aux2;
-    for(int i = 0; i < size; i++){
-        if(i == 0)
-            aux = V[i];
-        else{
-            if(V[i] < aux){
-                V[i-1] = V[i];
-                V[i] = aux;
-
+    float aux;
+    for(int i = 0; i < size - 1; i++){
+        for(int j = 0; j < (size - 1 - i); j++){ //PARTE DO MEIO DO FOR É UMA CONDICIONAL, NÃO UM LIMITE (SERVE QUERENDO OU NAO COMO)
+            if(V[j] > V[j+1]){
+                aux = V[j];
+                V[j] = V[j + 1];
+                V[j+1] = aux;
             }
         }
     }
-
 }
+
+//MÉTODO BUBBLE SORT UTILIZADO
